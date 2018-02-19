@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="rootModule">
+
+<head>
+    <title>NH - ToDo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <link rel="stylesheet" type="text/css" href="assets/libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0rc1/angular-route.min.js"></script>
+    
+    <script type="text/javascript" src="app/app.module.js"></script>
+    <script type="text/javascript" src="app/app.route.js"></script>
+    <script type="text/javascript" src="app/shared/base.service.js"></script>
+    <script type="text/javascript" src="app/shared/date-filter.directive.js"></script>
+    <script type="text/javascript" src="app/components/user/login/login.service.js"></script>
+    <script type="text/javascript" src="app/components/user/login/login.controller.js"></script>
+    <script type="text/javascript" src="app/components/user/registration/registration.service.js"></script>
+    <script type="text/javascript" src="app/components/user/registration/registration.controller.js"></script>
+    <script type="text/javascript" src="app/components/task/list/list.service.js"></script>
+    <script type="text/javascript" src="app/components/task/list/list.controller.js"></script>
+    <script type="text/javascript" src="app/components/task/create/create.service.js"></script>
+    <script type="text/javascript" src="app/components/task/create/create.controller.js"></script>
+</head>
+
+<body>
+    <div ng-view>
+        
+    </div>
+    <div class="toastr">
+        <span class="content">Error happened</span>
+    </div>
+</body>
+
+</html>

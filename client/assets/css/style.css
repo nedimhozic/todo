@@ -1,0 +1,135 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #161c17;
+    opacity: 1;
+    -webkit-animation: bg-fadein 0.3s ease-in-out;
+    -moz-animation: bg-fadein 0.3s ease-in-out;
+    -o-animation: bg-fadein 0.3s ease-in-out;
+    animation: bg-fadein 0.3s ease-in-out;
+    color:#fff;
+}
+
+a {
+    color: #d2c41a !important;
+}
+
+a:hover {
+    color:#c7ca03 !important;
+}
+
+.form-group label {
+    color: #d2c41a !important;
+}
+
+form .btn-submit{
+    background-color:#d2c41a !important;
+}
+
+form .btn-cancel {
+    color:#000;
+}
+
+.form-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-t-20 {
+    padding-top: 20%;
+}
+
+.register-area {
+    text-align: center;
+    color: #fff;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    padding: 20px;
+    -webkit-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 7px 5px 0px rgba(0,0,0,0.75);
+}
+
+#logoutBtn {
+    float:right;
+    background-color:#d2c41a;
+    color: #fff;
+}
+
+.task-list {
+    padding-top:100px;
+}
+
+.task-date {
+    font-size:10px;
+    opacity:0.7;
+}
+
+.list-item {
+    border: 1px solid #d2c41a;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.add-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 14px!important;
+    border: 1px solid #585527;
+}
+
+.add-item .glyphicon {
+    color: #d2c41a;
+    font-size:36px;
+    margin-left: 2px;
+    margin-top: 1px;
+}
+
+.add-item .circle {
+    border:1px solid #d2c41a;
+    border-radius:100%;
+}
+
+.overlay {
+    position: absolute;
+    display: none; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.help-block {
+    color: indianred;
+    float: right;
+    margin:0!important;
+}
+
+.toastr {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height:35px;
+    background-color:indianred;
+    width: 100%;
+    padding:5px;
+    padding-right:15px;
+    display:none;
+    z-index:3;
+}
+
+.toastr .content {
+    float:right;
+}
+

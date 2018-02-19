@@ -1,0 +1,57 @@
+<div class="form-center p-t-20">
+    <form id="registrationForm" name="registrationForm" method="post" ng-submit="submitRegistration()" novalidate>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <span class="help-block" ng-show="registrationForm.firstName.$error.required && submitted">
+                Required
+            </span>
+            <input type="text" class="form-control" id="firstName" name="firstName" ng-model="firstName" required/>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <span class="help-block" ng-show="registrationForm.lastName.$error.required && submitted">
+                Required
+            </span>
+            <input type="text" class="form-control" id="lastName" name="lastName" ng-model="lastName" required/>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <span class="help-block" ng-show="registrationForm.email.$error.required && submitted">
+                Required
+            </span>
+            <span class="help-block" ng-show="registrationForm.email.$error.email && submitted">
+                Wrong Format
+            </span>
+            <input type="email" class="form-control" id="email" name="email" ng-model="email" required/>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <span class="help-block" ng-show="registrationForm.password.$error.required && submitted">
+                Required
+            </span>
+            <span class="help-block" ng-show="registrationForm.password.$error.minlength && !registrationForm.password.$error.required && submitted">
+                Minimum length is 6
+            </span>
+            <input type="password" class="form-control" id="password" name="password" ng-model="password" ng-minlength="6" required>
+        </div>
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <span class="help-block" ng-show="registrationForm.confirmPassword.$error.required && submitted">
+                Required
+            </span>
+            <span class="help-block" ng-show="registrationForm.confirmPassword.$viewValue != registrationForm.password.$viewValue
+            && !registrationForm.password.$error.required
+            && !registrationForm.confirmPassword.$error.required
+            && submitted">
+                Not Match
+            </span>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" ng-model="confirmPassword" required>
+        </div>
+        <div class="form-group submit-container">
+            <button id="registerSubmit" class="btn btn-submit">Register</button>
+        </div>
+    </form>
+</div>
+<div class="register-area">Already have an account?
+    <a href="#!login"> Login!</a>
+</div>

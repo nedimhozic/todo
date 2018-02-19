@@ -1,0 +1,51 @@
+<div class="header">
+    Hello
+    <strong>{{user}}</strong>
+    <button type="button" class="btn btn-default" id="logoutBtn" ng-click="logout()">Log out</button>
+</div>
+<div class="task-list">
+    <div class="col-xs-12">
+        <div class="col-xs-3" ng-repeat="task in tasks">
+            <div class="list-item">
+                <div class="title">
+                    <strong>{{task.title}}</strong>
+                </div>
+                <div class="description">
+                    {{task.description}}
+                </div>
+                <span class="task-date" ng-bind="task.createdAt | DateFilter"></span>
+            </div>
+        </div>
+        <div class="col-xs-3">
+            <div class="list-item add-item" ng-click="addTask()">
+                <div class="circle">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="overlay" ng-controller="CreateController">
+    <div class="form-center">
+        <form id="addTaskForm" name="addTaskForm" method="post" ng-submit="submitForm()" novalidate>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <span class="help-block" ng-show="addTaskForm.title.$invalid && submitted">
+                    Required
+                </span>
+                <input type="text" class="form-control" ng-model="title" id="title" name="title" required/>
+            </div>
+            <div class="form-group">
+                <label for="desc">Description</label>
+                <span class="help-block" ng-show="addTaskForm.desc.$invalid && submitted">
+                    Required
+                </span>
+                <textarea class="form-control" ng-model="desc" id="desc" name="desc" rows="5" required></textarea>
+            </div>
+            <div class="form-group submit-container">
+                <button type="button" id="cancel" class="btn btn-cancel" ng-click="cancel()">Cancel</button>
+                <button id="addTaskSubmit" class="btn btn-submit">Create</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="form-center p-t-20">
+    <form id="loginForm" name="loginForm" method="post" ng-submit="submitLogin()" novalidate>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <span class="help-block" ng-show="loginForm.email.$error.required && submitted">
+                Required
+            </span>
+            <span class="help-block" ng-show="loginForm.email.$error.email && submitted">
+                Wrong format
+            </span>
+            <input type="email" class="form-control" ng-model="email" id="email" name="email" required/>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <span class="help-block" ng-show="loginForm.password.$invalid && submitted">
+                Required
+            </span>
+            <input type="password" class="form-control" ng-model="password" id="password" name="password" required>
+        </div>
+        <div class="form-group submit-container">
+            <button id="loginSubmit" class="btn btn-submit">Login</button>
+        </div>
+    </form>
+</div>
+<div class="register-area">No account?
+    <a href="#!registration"> Create one!</a>
+</div>
